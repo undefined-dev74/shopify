@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	display: block;
+}
+body,
+#root {
+	height: 100vh;
+	margin: 0;
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+boyd, textarea, input, select {
+    font-size: 1.6rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header' 'main' 'footer';
+    grid-template-rows: 5rem 1rem 5rem;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+
+header {
+    grid-area: header;
+    background-color: #9aa39a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff8000
+}
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    background: #203040;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
